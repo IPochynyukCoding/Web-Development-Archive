@@ -1,0 +1,34 @@
+PRGRAMMING QUESTION -60 POINTS
+
+1.	Create a new HTML document named: Exam1-Firstname-Lastname-SectionNumber (e.g., exam1¬-Mark-Smith-19374). (5 points)
+ 
+2.	Inside your HTML document, insert a form that includes the following elements:
+
+Two input fields for entering two different numbers. Each field should have a clear label: “Number 1:” and “Number 2:”. (5 points)
+ A dropdown list with two select options: one for addition (+) and one for subtraction (-).  (5 points)
+ A submit button for user interaction (5 points) 
+
+3.	Apply CSS styling (either internal or external) as detailed below: (5 points)
+Set the background color of the first input field to bisque.
+Set the background color of the second input field to yellow. 
+
+4.	Write a function or several functions so that clicking the submit button accomplishes the following: 
+-- Executes the operation chosen via the selection area using the two numbers input by the user. (20 points)
+-- Then displays a message: “The result is: xx”.  (5 points)
+
+5.	Utilize event handling techniques to manage the form submission process: This ensures that the calculation 
+and the message display are executed upon the button click and before the form is actually submitted. (10 points)
+---------------------------------------------------------------------------------------
+Appendix:
+
+List of basic arithmetic operators:
+•	Addition (+)
+•	Subtraction (-)
+•	Multiplication (*)
+•	Division (/)
+•	Modulus (Remainder) (%)
+•	Increment (++)
+•	Decrement (--)
+•	Exponentiation (**)
+•	Unary negation (-)
+•	Unary plus (+)

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="CSS/uhstyle.css"/>
+    <style>
+        .dietary{
+            text-align: center;
+            img{
+                max-width: 2.5em;
+                max-height: 2.5em;
+            }
+            label{
+                cursor: pointer;
+            }
+        }
+        .menu-items{
+            #Borsch, #Varenyky, #Salo, #Pampushky{
+                display:inline-block;
+                margin: 3em;
+                margin-top:-2em;
+                text-align: justify;
+                    h2{
+                    text-align: center;
+                    }
+                    img{
+                        width: 15em;
+                        height: 7.5em;
+                    }
+            }
+            #Roshen, #Zhivchik, #Flint, #CrazyBee{
+                display:inline-block;
+                margin: 3em;
+                margin-top: -2em;
+                text-align: justify;
+                h2{
+                    text-align: center;
+                    }
+            }
+            #Roshen, #CrazyBee{
+                img{
+                    width: 15em;
+                    height: 7.5em;
+                    }
+            }
+            #Zhivchik{
+                img{
+                    width:7.5em;
+                    height:15em;
+                }
+            }
+            #Flint{
+                img{
+                    width:15em;
+                    height:15em;
+                }
+            }
+            &:after {
+            display:inline-block;
+            width:100%;
+            content:'';
+            }
+        }
+    </style>
+    <script src="/JS/jquery-3.7.1.js"></script>
+</head>
+<body>
+    <header>
+    <img src="img/logos/UHLogo.png" id="imgLogo">
+    </header>
+    <div class="topnav" id="menuBar">
+        <ul>
+            <li class="nav"><a href="home.html">Home</a></li>
+            <li class="nav"><a class= "current" href="menu.html">Menu</a></li>
+            <li class="nav"><a href="order.html">Order</a></li>
+            <li class="nav"><a href="partner.html">About Partner</a></li>
+        </ul>
+    </div>
+    <main class="window">
+        <div class="dietary">
+            <label for="vegetarian">
+                <img src="/img/menu/icon_vegetarian.png">
+                Vegetarian
+            </label>    
+                <input type="checkbox" id="vegetarian" value="vegetarian">     
+            <label for="vegan">
+                <img src="/img/menu/icon_vegan.png">
+                Vegan
+                <input type="checkbox" id="vegan" value="vegan">
+            </label>     
+        </div>
+        <div class="menu-items">
+        <h1>Food</h1>
+            <article data-group=" vegetarian vegan" class="diet vegetarian vegan" id="Borsch">
+                <h2>Borsch</h2>
+                <img src="/img/menu/Borsch.png">
+                <details>
+                 <!--Nutrition facts from https://www.fatsecret.com/calories-nutrition/generic/beet-soup-(borscht)-->
+                    <summary>Nutritional Information</summary>
+                    <p>Serving Size: 2 cups (490g)</p>
+                    <ul>
+                        <li>Calories: 156</li>
+                        <li>Fat: 8g</li>
+                        <li>Carbohydrates: 17g</li>
+                        <li>Cholestreol: 7mg</li>
+                        <li>Sodium: 990mg</li>
+                        <li>Sugar: 10g</li>
+                        <li>Protein: 7g</li>
+                    </ul>
+                </details>
+            </article>
+            <article data-group=" vegetarian" class="diet vegetarian" id="Varenyky">
+                <h2>Varenyky</h2>
+                <img src="/img/menu/Varenyky.png">
+                <details>
+                    <summary>Nutritional Information</summary>
+                    <!--Nutrition facts from https://www.nutritionix.com/mx/food/vareniki-->
+                    <p>Serving Size: 7 Vareniki (266g)</p>
+                    <ul>
+                        <li>Calories: 518</li>
+                        <li>Fat: 16.3g</li>
+                        <li>Carbohydrates: 79.3g</li>
+                        <li>Cholestreol: 10.7mg</li>
+                        <li>Sodium:330mg</li>
+                        <li>Sugar: 4.7g</li>
+                        <li>Protein: 14g</li>
+                    </ul>
+                </details>
+            </article>
+            <article data-group=" none" class= "diet none" id="Salo">
+                <h2>Salo</h2>
+                <img src="/img/menu/Salo.png">
+                <details>
+                    <summary>Nutritional Information</summary>
+                    <!--Nutrition facts from https://bonapeti.com/n-58183-Salo-->
+                    <p>Serving Size: 50g (1.75oz)</p>
+                    <ul>
+                        <li>Calories: 313</li>
+                        <li>Fat: 33.05g</li>
+                        <li>Carbohydrates: 0g</li>
+                        <li>Cholestreol: 39.5mg</li>
+                        <li>Sugar: 0g</li>
+                        <li>Protein: 3.53g</li>
+                    </ul>
+                </details>
+            </article>
+            <article data-group=" vegetarian" class="diet vegetarian" id="Pampushky">
+                <h2>Pampushky</h2>
+                <img src="/img/menu/Pampushky.png">
+                <details>
+                    <summary>Nutritional Information</summary>
+                    <!--Nutrition facts from https://www.eatthelove.com/pampushky/-->
+                    <p>Serving Size: 1 knot</p>
+                    <ul>
+                        <li>Calories: 248</li>
+                        <li>Fat: 9.8g</li>
+                        <li>Carbohydrates: 34.2g</li>
+                        <li>Cholestreol: 26mg</li>
+                        <li>Sodium: 441mg</li>
+                        <li>Sugar: 0.6g</li>
+                        <li>Protein: 5.3g</li>
+                    </ul>
+                </details>
+            </article>
+        <h1>Import Items</h1>
+            <article data-group=" vegetarian" class="diet vegetarian" id="Roshen">
+                <h2>Roshen Chocolate</h2>
+                <img src="/img/menu/RoshenBar.png">
+                <details>
+                    <summary>Nutritional Information</summary>
+                    <!--Nutrition facts from https://www.amazon.com/Roshen-Chocolate-Brulee-Filling-1-51oz/dp/B09LMSYVYS?th=1-->
+                    <p>Serving Size: 1 bar (38g)</p>
+                    <ul>
+                        <li>Calories: 210</li>
+                        <li>Fat: 12g</li>
+                        <li>Carbohydrates: 22g</li>
+                        <li>Cholestreol: 5mg</li>
+                        <li>Sodium: 25mg</li>
+                        <li>Sugar: 19g</li>
+                        <li>Protein: 3g</li>
+                    </ul>
+                </details>
+            </article>
+            <article data-group=" vegetarian vegan" class="diet vegetarian vegan" id="Zhivchik">
+                <h2>Zhivchik</h2>
+                <img src="/img/menu/Zhivchik.png">
+                <details>
+                    <summary>Nutritional Information</summary>
+                    <!--Nutrition facts from https://novus.zakaz.ua/en/products/napii-zhivchik-500ml--04820000193535/-->
+                    <p>Serving Size: 1 can (500ml)</p>
+                    <ul>
+                        <li>Calories: 185</li>
+                        <li>Fat: 0g</li>
+                        <li>Carbohydrates: 48g</li>
+                        <li>Cholestreol: 0mg</li>
+                        <li>Sodium: 0mg</li>
+                        <li>Sugar: 48g</li>
+                        <li>Protein: 0g</li>
+                    </ul>
+                </details>
+                </article>
+                <article data-group=" vegetarian" class="diet vegetarian" id="Flint">
+                    <h2>Flint</h2>
+                    <img src="/img/menu/Flint.png">
+                    <details>
+                        <summary>Nutritional Information</summary>
+                        <!--Nutrition facts from https://world.openfoodfacts.org/product/4820182742989/bread-croutons-with-cheese-flavor-flint-->
+                        <p>Serving Size: 1 bag (35 g)</p>
+                        <ul>
+                            <li>Calories: 435</li>
+                            <li>Fat: 7.98g</li>
+                            <li>Carbohydrates: 78.6g</li>
+                            <li>Cholestreol: 0mg</li>
+                            <li>Sodium: 2205mg</li>
+                            <li>Sugar: 0g</li>
+                            <li>Protein: 12g</li>
+                        </ul>
+                    </details>
+                </article>
+                <article data-group=" vegetarian vegan" class="diet vegetarian vegan" id="CrazyBee">
+                    <h2>Crazy Bee</h2>
+                    <img src="/img/menu/CrazyBee.png">
+                    <details>
+                        <summary>Nutritional Information</summary>
+                        <!--Nutrition facts from https://www.amazon.com/Roshen-Crazy-Frutty-Jelly-Candy/dp/B00ZGLEULS-->
+                        <p>Serving size: 5 pieces (33g)</p>
+                        <ul>
+                            <li>Calories: 110</li>
+                            <li>Fat: 0g</li>
+                            <li>Carbohydrates: 27g</li>
+                            <li>Cholestreol: 0mg</li>
+                            <li>Sodium: 50mg</li>
+                            <li>Sugar: 22g</li>
+                            <li>Protein: 0g</li>
+                        </ul>
+                    </details>
+                </article>
+            </div>
+</main>
+<script src="/JS/menu.js"></script>
+</body>
+<footer>
+    <p>© 2024 University of Houston - All Rights Reserved</p>
+</footer>
+</html>

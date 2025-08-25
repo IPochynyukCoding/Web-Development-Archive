@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even Number Generator</title>
+    <style>
+        body {
+            font-family:Arial, Helvetica, sans-serif;
+            h1{
+                font-size: 2em;
+            }
+
+            div{
+                margin-bottom: 3em;
+            }
+            #num1{
+                background-color: beige;
+            }
+
+            #num2{
+                background-color: grey;
+                color:white;
+            }
+            button{
+                background-color: lightgreen;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Sequence Generator</h1>
+    <div class="firstEven">
+    
+    <label for="num1">Enter the first even number:</label>
+    <input type="number" id="num1" required>
+    </div>
+    <div>
+    <div class="secondEven">
+    <label for="num2">Enter the second even number:</label>
+    <input type="number" id="num2" required>
+    </div>
+    <button type ="submit">Click Here to Generate Sequence.</button>
+    <p>Arithmetic Sequence:<span id="regular"></span></p>
+    <p>Reversed Sequence:<span id="reverse"></span></p>
+    <p><a href="https://www.youtube.com/watch?v=xDeQVaoTvJM">Easter Egg.</a></p>
+    <script>
+        //Import number fields for array calculation
+        let Number1 = document.getElementById("num1");
+        let Number2 = document.getElementById("num2");
+        //Import outputs for event listener
+        let regularArray = document.getElementById("regular");
+        let reverseArray = document.getElementById("reverse");
+        function generateEvenSequence(Number1, Number2){
+            //Parse the string values from number fields to numbers to make calculation work and initalize the first two numbers for matrix
+            let evenMatrix = [parseInt(Number1.value),parseInt(Number2.value)];
+            for (i=2;i<=50;i++){
+                //Generate numbers based on previous even numbers
+                evenMatrix[i]=evenMatrix[i-1]+(evenMatrix[i-1]-evenMatrix[i-2]); 
+                //Stop loop if length is equal to 50
+                if (evenMatrix.length == 50){
+                    break;
+                }
+            }
+            return evenMatrix;
+        }
+        document.querySelector('button[type="submit"]').addEventListener("click", function (e){
+            //Make sure both numbers are positive even numbers
+            if((Number1.value % 2) !== 0 || Number1.value <=0 || (Number2.value % 2) !== 0 || Number2.value <=0){
+                alert("Both numbers must be positive even numbers.")
+                e.preventDefault()
+            }
+            //Output the regular and reverse arrays if conditions match
+            else{
+                regularArray.innerText = generateEvenSequence(Number1, Number2);
+                reverseArray.innerText = generateEvenSequence(Number1,Number2).reverse();
+            }
+        });
+
+    </script>
+</body>
+</html>

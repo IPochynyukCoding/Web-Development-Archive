@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="CSS/uhstyle.css" />
+    <style>
+    /*newitem spacing and after trick from: https://stackoverflow.com/questions/16964294/how-to-evenly-space-many-inline-block-elements */
+    .newitems {
+        border: 2px solid  #C8102E; 
+        text-align: justify;
+
+        &:after {
+            display:inline-block;
+            width:100%;
+            content:'';
+        }
+        article.item {
+            margin: 20pt;
+            display:inline-block;
+            ul {
+                font-size:15px;
+                margin-right: 25px;
+            }
+            
+            img {
+                max-width: 20rem;
+                max-height: 10rem;
+                margin-left:auto;
+                margin-right:auto;
+                display:block;
+            } 
+    }
+}
+    button {
+        font-size: 2.5rem;
+        width:50%;
+        border: none;
+        border-radius: 20px;
+        background-color: #C8102E;
+        color:white;
+        cursor:pointer;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="img/UHLogo.png" id="imgLogo">
+        <a href="placeholder.html">
+            <img src="img/Cart.png" alt= "Checkout" id="imgCart">
+        </a>
+    </header>
+    <div class="topnav" id="menuBar">
+        <ul>
+            <li class="current"><a class= "current" href="home.html">Home</a></li>
+            <li class="nav"><a href="placeholder.html">Menu</a></li>
+            <li class="nav"><a href="placeholder.html">Events</a></li>
+            <li class="nav"><a href="placeholder.html">Review Us</a></li>
+            <li class="nav"><a href="partner.html">About Partner</a></li>
+        </ul>
+      </div>
+<main>
+<h1>Welcome to the Sugar Land branch of University of Houston Dining Services.</h1>
+<h2>We offer</h2>
+      
+<div class = "newitems">
+    <article class= "item" id="food">
+        <h3 class="authentic">Authentic Ukrainian Food</h3>
+            <a href="placeholder.html">
+                <img src="img/Borsch.png">
+            </a>
+        <h4>Our most popular food include</h4>
+            <ul>
+                <li>Borsch</li>
+                <li>Vareynky</li>
+            </ul>
+    </article>
+
+    <article class="item" id="donation">
+        <h3 class="donation">Donations to Ukraine</h3>
+         <a href="https://u24.gov.ua/">
+            <img src="img/United24.png">
+        </a>
+        <h4>We are proud to support United24</h4>
+            <ul>
+                <li>United24 is the official donation organization of the Ukrainian government.</li>
+                <li>We will donate 50% of your order to United24.</li>
+            </ul>
+    </article>
+
+    <article class="item" id="import">
+        <h3 class="import">Imports from Ukraine</h3>
+        <a href="https://roshen.com/en">
+            <img src="img/Roshen.png">
+        </a>
+        <h4>Our import partners include</h4>
+            <ul>
+                <li>Roschen</li>
+                <li>Zhivchik</li>
+            </ul>
+    </article>
+</div>
+</main>
+<a href="placeholder.html">
+        <button>ORDER NOW</button>
+ </a>
+</body>
+<footer>
+    <p>© 2024 University of Houston - All Rights Reserved</p>
+</footer>
+</html>

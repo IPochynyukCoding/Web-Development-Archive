@@ -1,0 +1,92 @@
+/*Default font and color parameters for website */
+:root {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    background-color: grey;
+}
+
+h1 {
+    font-size:2.5rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: 50px;
+    margin-right:50px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.75rem;
+    margin-top: 50px;
+    text-align: center;
+}
+h4{
+    font-size:1.25rem;
+    margin-right:50px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: white;
+}
+
+/* CSS section for logo*/
+#imgLogo {
+    max-width: 150px;
+    background-color: white;
+}
+
+/* CSS for menubar */
+#menuBar {
+    background-color: #C8102E;
+
+    font-family: 'Calibri';
+    font-size: 2rem;
+    width: 100%;
+    display: inline-block;
+    padding: 1rem 0.5rem;
+    margin-top: 15px;
+    border-radius: 25px;
+    ul{
+        margin:0;
+        padding:0;
+        list-style: none;
+        white-space: nowrap;
+
+        /*Flexbox for better mobile viewing, thanks to René*/
+        display: flex;
+        column-gap: 5rem;
+        flex-wrap: wrap;
+        flex-direction:initial;
+
+        li {
+            float: left;
+            a{
+                color: white;
+            }
+            a.current {
+            background-color:white;
+            color: black; 
+            }
+            &:hover {
+            color: white;
+            background-color: black;
+            }
+        }
+    }
+}
+
+/* Default background and border color for main content*/
+main{
+    background-color: antiquewhite;
+    border-radius: 1em;
+    border: 2px solid  #C8102E; 
+    width:87.5%;
+    display:block;
+    margin-left:auto;
+    margin-right: auto;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        #Num1{
+            background-color: bisque;
+        }
+        #Num2{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <form method="post">
+    <label>Number 1:</label>
+    <input type="number" id="Num1">
+    <label>Number 2:</label>
+    <input type="number" id="Num2">
+    <button type="submit">Run</button>
+    <p>Preferred Operation:</p>
+    <div class="radio-group">
+
+    <input type="radio" id="add" value="addition">
+    <label>Addition (+)</label>
+
+    <input type="radio" id="subtract" value="subtraction">
+    <label>Subtraction (-)</label>
+
+    </div>
+</form>
+    <script>
+       //Увага: українській повідомлення на всі людей. Це код дуже жахливий. Я не добре JavaScript. 
+       //Я добре на CSS, HTML, і англійська мова. Це не добрий на ця момента. Мені життя не працює і неправний. Памьятє це! Вибачте всі на погано кода.   
+
+        //Get Num1 and Num2 from Form
+        let Num1 = document.getElementsByTagName('Num1')
+        let Num2 = document.getElementsByTagName('Num2')
+        //Attempt to add Num1 and Num2
+        function addition(Num1,Num2){
+            return Num1 + Num2;
+            console.log(Num1+Num2);
+        }
+        //Attempt to subtract Num2 from Num1
+        function subtraction(Num1,Num2){
+            return Num1 - Num2;
+            console.log(Num1 - Num2);
+        }
+        //Attempted to get event handling and prevent default
+        document.querySelector('button[type="submit"]').addEventListener('click',function(e) {
+            e.preventDefault();
+            alert("The result is")
+            e.target.form.submit();
+        });
+    </script>
+</body>
+</html>

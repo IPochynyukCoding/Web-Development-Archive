@@ -1,0 +1,32 @@
+Programming Questions: (60 points)—Section 19174
+Objective:
+
+Develop a webpage that allows users to input numbers and manipulate arrays based on arithmetic sequences.
+
+Tasks:
+
+ 
+
+Create a folder named: Exam2-Firstname-Lastname-SectionNumber (e.g., Exam2­-Mark-Smith-19174). Put all your files inside this folder. (2 points)
+User Input
+Create a form on the webpage that:
+
+requires users to input two positive even Ensure that the inputs validate for positiveness and evenness, and prompt an error if the conditions are not met. (15 points)
+A submit button labeled as “Click Here to Generate Sequence” for user interaction. (3 points)
+Implement the following items when the submit button is clicked:
+Arithmetic Sequence Array Creation and Display (20 points)
+Write a function to generate and display an arithmetic sequence array with a length of 50, using the two numbers entered by the user as the first two elements of the sequence. (Hint: calculate the common difference based on these two input numbers and use it to complete the sequence.)
+
+Array Manipulation and Display (20 points)
+Write a function to reverse the arithmetic sequence array and display it on the webpage.
+
+Additional Requirements:
+
+The webpage must handle user inputs robustly, providing feedback if the entered values do not meet the specified criteria of being positive and even.
+Include clear labels on the form, set nice background color for input fields and the button to guide the user on what is expected.
+Comment your code appropriately to explain your logic and any assumptions made.
+Submission Instructions:
+
+       1. Upload the zip folder on Canvas.
+
+      2. Upload the folder on GitHub, using the github link

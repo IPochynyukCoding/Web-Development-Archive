@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="CSS/uhstyle.css"/>
+    <style>
+        main{
+            img{
+                    width: 10em;
+                    height: 5em;
+                }
+            .menu{
+                width:10%
+            }
+            label{
+                font-size: 2rem;
+            }
+            .email{
+                font-size: 1.5em;
+                margin-bottom: 2em;
+                text-align: center;
+                #address{
+                    font-size: 1em;
+                }
+            }
+            .importItems{
+                #alert{
+                    text-align: center;
+                }
+                #Zhivchik{
+                    width: 5em;
+                    height:10em;
+                }
+                #Flint{
+                    width:10em;
+                    height:10em;
+                }
+             }
+        .cost{
+            text-align: right;
+            font-size: large;
+            div{
+                margin-bottom: 3em;
+                margin-right: 1rem;
+            }
+        }
+    }
+    button {
+        font-size: 40px;
+        width:100%;
+        padding: 12px 16px;
+        margin-left:auto;
+        margin-right:auto;
+        border: none;
+        border-radius: 20px;
+        background-color: #C8102E;
+        color:white;
+        cursor:pointer;
+    }
+    </style>
+<body>
+    <header>
+    <img src="img/logos/UHLogo.png" id="imgLogo">
+    </header>
+    <div class="topnav" id="menuBar">
+        <ul>
+            <li class="current"><a href="home.html">Home</a></li>
+            <li class="nav"><a href="menu.html">Menu</a></li>
+            <li class="nav"><a class="current" href="order.html">Order</a></li>
+            <li class="nav"><a href="partner.html">About Partner</a></li>
+        </ul>
+    </div>
+    <main>
+        <form method="GET" >
+        <h1>Menu Items</h1>
+        <div class="menuItems">
+            <label for="borschCounter">Borsch</label>
+            <p>Price: $4.99</p>
+            <img src="img/menu/Borsch.png">
+            <input type="number" class="menu" min="0" id="borschCounter" placeholder="0" requiredpattern="/\d/"/>
+            <p>Total: $<span id="borschTotal"></span></p>
+            <label for="varenykyCounter">Varenyky</label>
+            <p>Price: $6.99</p>
+            <img src="/img/menu/Varenyky.png">
+            <input type="number" class="menu" min="0" id="varenykyCounter" placeholder="0" requiredpattern="/\d/"/>
+            <p>Total: $<span id="varenykyTotal"></span></p>
+            <label for="saloCounter">Salo</label>
+            <p>Price: $2.99</p>
+            <img src="/img/menu/Salo.png">
+            <input type="number" class="menu" min="0" id="saloCounter" placeholder="0" requiredpattern="/\d/"/>
+            <p>Total: $<span id="saloTotal"></span></p>
+            <label for="pampushkyCounter">Pampushky</label>
+            <p>Price: $7.99</p>
+            <img src="/img/menu/Pampushky.png">
+            <input type="number" class="menu" min="0" id="pampushkyCounter" placeholder="0" requiredpattern="/\d/"/>
+            <p>Total: $<span id="pampushkyTotal"></span></p>
+        <div class="importItems">
+            <h1>Import Items</h1>
+            <p id="alert">Each import item is limited to 5 units per order.</p>
+                <label for="roshenCounter">Roshen Chocolate</label>
+                <p>Price: $1.50</p>
+                <img src="/img/menu/RoshenBar.png">
+                <input type="number" class="menu" min="0" max="5" id="roshenCounter" placeholder="0" requiredpattern="/\d/"/>
+                <p>Total: $<span id="roshenTotal"></span></p>
+                <label for="zhivchikCounter">Zhivchik</label>
+                <p>Price: $3.99</p>
+                <img src="/img/menu/Zhivchik.png" id="Zhivchik">
+                <input type="number" class="menu" min="0" max="5" id="zhivchikCounter" placeholder="0" requiredpattern="/\d/"/>
+                <p>Total: $<span id="zhivchikTotal"></span></p>
+                <label for="flintCounter">Flint</label>
+                <p>Price: $1.99</p>
+                <img src="/img/menu/Flint.png" id="Flint">
+                <input type="number" class="menu" min="0" max="5" id="flintCounter" placeholder="0" requiredpattern="/\d/"/>
+                <p>Total: $<span id="flintTotal"></span></p>
+                <label for="crazyBeeCounter">Crazy Bee</label>
+                <p>Price: $0.99</p>
+                <img src="/img/menu/CrazyBee.png">
+                <input type="number" class="menu" min="0" max="5" id="crazyBeeCounter" placeholder="0" pattern="/\d/"/>
+                <p>Total: $<span id="crazyBeeTotal"></span></p>
+        </div>
+        <div class="cost">
+            <div>Subtotal: $<span class="menu" id="subTotal"></span></div>
+            <div>Tax: $<span class="menu" id ="taxCost"></span></div>
+            <div>Total: $<span class="menu" id="totalCost"></span></div>
+        </div>
+        <div class="email">
+            <p id="emailLabel">Please enter email address for us to confirm your order.</p>
+            <label id="address">Email Address:</label>
+            <input type="text" class="confirmation" id="email" required/>
+        </div>
+        <button type="submit" id="submit">Submit Order</button>
+    </form>
+    </main>
+    <script src="/JS/order.js"></script>
+</body>
